@@ -16,27 +16,27 @@ const frontRoutes = createBrowserRouter([
     errorElement: <Errors />
   },
   {
-    path: '/',
+    path: '/test',
     element: <TestFile1 />,
     children: [
       {
-        path: '/parcours',
+        path: '/test/parcours',
         element: <TestFile2 />
       },
       {
-        path: '/projets',
+        path: '/test/parcours/projets',
         element: <TestFile3 />
       },
       {
-        path: '/en/portfolio',
+        path: '/test/parcours/projets/en/portfolio',
         element: <TestFile4 />
       },
       {
-        path: '/en/education',
+        path: '/test/parcours/projets/en/portfolio/en/education',
         element: <TestFile5 />
       },
       {
-        path: '/en/projects',
+        path: '/test/parcours/projets/en/portfolio/en/projects',
         element: <TestFile6 />
       }
     ]
