@@ -1,31 +1,46 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 import TestFile1 from './pages/testFile1';
 import TestFile2 from './pages/testFile2';
 import TestFile3 from './pages/testFile3';
 import TestFile4 from './pages/en/testFile4';
 import TestFile5 from './pages/en/testFile5';
 import TestFile6 from './pages/en/testFile6';
-// import Errors from './errors/errors';
 
+const frontRoutes = createHashRouter([
 
+  {
+    path: '/',
+    element: <TestFile1 />
+  },
+  {
+    path: '/parcours',
+    element: <TestFile2 />
+  },
+  {
+    path: '/projets',
+    element: <TestFile3 />
+  },
+  {
+    path: '/en/portfolio',
+    element: <TestFile4 />
+  },
+  {
+    path: '/en/education',
+    element: <TestFile5 />
+  },
+  {
+    path: '/en/projects',
+    element: <TestFile6 />
+  },
 
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <HashRouter>
-      <Routes>
-        <Route path='/' element={<TestFile1 />} />
-        <Route path='/parcours' element={<TestFile2 />} />
-        <Route path='/projets' element={<TestFile3 />} />
-        <Route path='/en/portfolio' element={<TestFile4 />} />
-        <Route path='/en/education' element={<TestFile5 />} />
-        <Route path='/en/projects' element={<TestFile6 />} />
-      </Routes>
-    </HashRouter>
-
+    <RouterProvider router={frontRoutes} />
   </React.StrictMode>
 );
 
