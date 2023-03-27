@@ -16,7 +16,7 @@ const frontRoutes = createBrowserRouter([
     errorElement: <Errors />
   },
   {
-    path: '/test',
+    path: '/',
     element: <TestFile1 />,
     children: [
       {
