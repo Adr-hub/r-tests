@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createHashRouter } from 'react-router-dom';
 import TestFile1 from './pages/testFile1';
 import TestFile2 from './pages/testFile2';
 import TestFile3 from './pages/testFile3';
@@ -10,7 +10,7 @@ import TestFile6 from './pages/en/testFile6';
 import Errors from './errors/errors';
 
 
-const frontRoutes = createBrowserRouter([
+const frontRoutes = createHashRouter([
 
   {
     errorElement: <Errors />
