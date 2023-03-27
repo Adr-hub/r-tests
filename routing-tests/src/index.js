@@ -18,29 +18,29 @@ const frontRoutes = createBrowserRouter([
   {
     path: '/',
     element: <TestFile1 />,
-    children: [
-      {
-        path: '/parcours',
-        element: <TestFile2 />
-      },
-      {
-        path: '/parcours/projets',
-        element: <TestFile3 />
-      },
-      {
-        path: '/parcours/projets/en/portfolio',
-        element: <TestFile4 />
-      },
-      {
-        path: '/parcours/projets/en/portfolio/en/education',
-        element: <TestFile5 />
-      },
-      {
-        path: '/parcours/projets/en/portfolio/en/projects',
-        element: <TestFile6 />
-      }
-    ]
+  },
+  {
+    path: '/parcours',
+    element: <TestFile2 />
+  },
+  {
+    path: '/projets',
+    element: <TestFile3 />
+  },
+  {
+    path: '/en/portfolio',
+    element: <TestFile4 />
+  },
+  {
+    path: '/en/education',
+    element: <TestFile5 />
+  },
+  {
+    path: '/en/projects',
+    element: <TestFile6 />
   }
+
+
 
 ]);
 
