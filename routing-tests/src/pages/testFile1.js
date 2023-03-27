@@ -10,7 +10,7 @@ const TestFile1 = () => {
         <Link className="frLinks" to={'/en/education'} onClick={(ev) => {
 
             ev.preventDefault();
-            linkEvent();
+            linkEvent(ev);
         }}>education</Link>
         <p style={{ visibility: "hidden" }}>test</p>
         <p style={{ visibility: "hidden" }}>test</p>
